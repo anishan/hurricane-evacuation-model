@@ -5,7 +5,7 @@ A model for traffic during an evacuation of Boston before a hurricane. This mode
 Download Processing 2.2.1 from [processing.org] (processing.org). Open the QueueingModel.pde script in processing and click run. You may need to wait briefly as the data loads.
 
 ---
-Anisha Nakagawa
-MIT Media Lab, Changing Places group
-Supervisor: Ira Winder
+Anisha Nakagawa  
+MIT Media Lab, Changing Places group  
+Supervisor: Ira Winder  
 Summer 2016
