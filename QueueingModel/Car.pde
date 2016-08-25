@@ -209,7 +209,7 @@ public class Car
       pg.fill(c);
       pg.noStroke();
       PVector point = mercatorMap.getScreenLocation(this.current);
-      pg.ellipse(point.x, point.y, 5, 5);
+      pg.ellipse(point.x, point.y, 6, 6);
     }
   }
 

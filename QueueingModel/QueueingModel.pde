@@ -1,5 +1,6 @@
 // Hurrican Evacuation Traffic Model
 // Anisha Nakagawa
+// Supervisor: Ira Winder
 // Models evacuations in Massachusetts during hurricanes
 // using queueing theory to model traffic and congestion
 // With Ira Winder, Changing Places, MIT Media Lab

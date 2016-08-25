@@ -171,10 +171,10 @@ public class BackgroundHandler
     textPGraphic.text("due to hurricanes", width*0.6, height*0.145);
     
     // Key interaction instructions
-    textPGraphic.text("Keyboard Controls:", width*0.6, height*0.25);
-    textPGraphic.text("Change hurricane category: 1, 2, 3, or 4", width*0.6, height*0.27);
-    textPGraphic.text("Zoom: + and -", width*0.6, height*0.29);
-    textPGraphic.text("Pan: arrow keys", width*0.6, height*0.31);
+    textPGraphic.text("Keyboard Controls:", width*0.6, height*0.27);
+    textPGraphic.text("Change hurricane category: 1, 2, 3, or 4", width*0.6, height*0.30);
+    textPGraphic.text("Zoom: + and -", width*0.6, height*0.33);
+    textPGraphic.text("Pan: arrow keys", width*0.6, height*0.36);
     
     // Bottom Attribution
     textPGraphic.textSize(height*0.02);
@@ -184,34 +184,34 @@ public class BackgroundHandler
     // legend bar
     
     float top = height*0.65;
-    float left = width*0.86;
+    float left = width*0.8;
     float barWidth = width*0.02;
     float barHeight = height*0.2;
     
     textPGraphic.textSize(height*0.02);
     textPGraphic.fill(255);
-    textPGraphic.text("Legend", left - width*0.06, height*0.5);
+    textPGraphic.text("Legend", left, height*0.5);
     textPGraphic.fill(255, 200);
-    textPGraphic.text("Roads", left - width*0.06+1.5*barWidth, height*0.54);
-    textPGraphic.text("People to evacuate", left - width*0.06+1.5*barWidth, height*0.58);
+    textPGraphic.text("Roads", left+1.5*barWidth, height*0.54);
+    textPGraphic.text("People to evacuate", left +1.5*barWidth, height*0.57);
     // Sample road line
     textPGraphic.stroke(#00aaff);
     textPGraphic.strokeWeight(1);
-    textPGraphic.line(left - width*0.06, height*0.53, left - width*0.06+barWidth, height*0.53);
+    textPGraphic.line(left , height*0.53, left+barWidth, height*0.53);
     // Sample population point
     textPGraphic.noStroke();
     textPGraphic.fill(#ffffff, 75);
-    textPGraphic.ellipse(left - width*0.06 + 0.5*barWidth, height*0.57, int(15/2), int(15/2));
+    textPGraphic.ellipse(left + 0.75*barWidth, height*0.56, int(15/2), int(15/2));
     textPGraphic.fill(#ffffff, 50);
-    textPGraphic.ellipse(left - width*0.06 + 0.5*barWidth, height*0.57, int(15*3/4), int(15*3/4));
+    textPGraphic.ellipse(left  + 0.75*barWidth, height*0.56, int(15*3/4), int(15*3/4));
     textPGraphic.fill(#ffffff, 25);
-    textPGraphic.ellipse(left - width*0.06 + 0.5*barWidth, height*0.57, int(15), int(15));
+    textPGraphic.ellipse(left + 0.75*barWidth, height*0.56, int(15), int(15));
     
     
     // labels
     textPGraphic.fill(255);
     textPGraphic.textSize(height*0.02);
-    textPGraphic.text("Time Spent Congested", left - width*0.06, top - height*0.02);
+    textPGraphic.text("Time Spent Congested", left, top - height*0.02);
     textPGraphic.textSize(height*0.018);
     textPGraphic.fill(255, 200);
     textPGraphic.text("20 hr", left+1.5*barWidth, top+height*0.02);
