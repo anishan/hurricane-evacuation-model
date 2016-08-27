@@ -252,7 +252,7 @@ public class BackgroundHandler
     // Draw roads
     image(roadPGraphic, 0, 0, width, height);
 
-    // Draw pop centers
+//    // Draw pop centers
     image(popCentersPGraphic, 0, 0, width, height);
 
     // initialize residue

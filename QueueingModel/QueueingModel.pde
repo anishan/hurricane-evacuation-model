@@ -85,13 +85,13 @@ boolean initialized = false;
 
 // Modeling variables
 int personPerCar = 5; // Each real-life car holds 5 people
-int carsPerAgent = 40; // Each agent represents n cars
-int carsDrawn = 15; // One in every n cars will be drawn to screen
+int carsPerAgent = 20; // Each agent represents n cars
+int carsDrawn = 10; // One in every n cars will be drawn to screen
 int hurrCat = 4;
 
 // Simulation timing
 float prevTime;
-float timeStep = 1.0; // simulation time (seconds) / real time (ms)
+float timeStep = 0.5; // simulation time (seconds) / real time (ms)
 // Higher numbers make the simulation run faster
 float globalTime = 0; // seconds
 float prevResidueTime = globalTime;
@@ -154,6 +154,8 @@ void setup()
 //  testCar = new Car(pathPlanner, new PVector(41.534626,-71.078795), new PVector(41.947685,-71.021003));
 //  testCar = new Car(pathPlanner, new PVector(42.627765,-70.708083), new PVector(42.503305,-71.123658));
 //  testCar = new Car(pathPlanner, new PVector(42.373466,-71.067912), new PVector(42.662933,-71.19588));
+//    testCar = new Car(pathPlanner, new PVector(41.778384,-70.541929), new PVector(42.0569,-70.19272));
+    //  testCar = new Car(pathPlanner, new PVector(41.686426,-70.242325), new PVector(41.947685,-71.021003));
 
   // Start tracking time
   prevTime = millis();
@@ -235,7 +237,7 @@ void draw()
     if (emptyModel)
     {
       pause = true;
-////      // Histogram, uncomment to print to screen
+//      // Histogram, uncomment to print to screen
 //      ArrayList<Integer> time = new ArrayList<Integer>();
 //      ArrayList<Integer> count = new ArrayList<Integer>();
 //      for (Car c: agentHandler.cars)
@@ -262,7 +264,7 @@ void draw()
 //      }
     }
     
-  //  testCar.drawCar(mercatorMap, agentsPGraphic);
+//    testCar.drawCar(mercatorMap, agentsPGraphic);
     agentsPGraphic.endDraw();
     
     
@@ -340,9 +342,10 @@ void keyPressed()
   } else if (key == 't') // testing
   {
     testCar.restart();
+    globalTime = 0;
   } else if (key == 'T') // testing
   {
-    println("[QueueingModel] totalTime: " + testCar.totalTime);
+    println(testCar.totalTime);
   } else if (key == 'y')
   {
     println("[QueueingModel] time left on road: " + testCar.timeRemaining);
